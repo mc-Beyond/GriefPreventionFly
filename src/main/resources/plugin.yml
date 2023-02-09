@@ -1,0 +1,16 @@
+name: GriefPreventionFly
+
+version: 1.0.0
+api-version: 1.19
+
+authors: [ MouBieCat ]
+description: "該插件允許玩家在宣稱的領地中飛行。"
+
+main: com.moubiecat.MouBieCat
+depend:
+  - GriefPrevention
+
+permissions:
+  GriefPreventionFly.bypass:
+    description: "可以繞過領地飛行判斷的權限。"
+    default: op
