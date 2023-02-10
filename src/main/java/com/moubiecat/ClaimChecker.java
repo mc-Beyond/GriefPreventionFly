@@ -46,12 +46,12 @@ public final class ClaimChecker extends BukkitRunnable {
 
                 // 如果玩家正在飛行，則撥放粒子特效
                 if (player.isFlying()) {
-                    player.spawnParticle(Particle.REDSTONE, player.getLocation(), 5, 0.2f, 0.2f, 0.2f, new Particle.DustOptions(Color.GREEN, 2));
+                    player.spawnParticle(Particle.REDSTONE, player.getLocation(), 5, 0.2f, 0.2f, 0.2f, new Particle.DustOptions(Color.PURPLE, 2));
                 }
-
             } else if (player.getAllowFlight()) {
                 player.sendMessage("§7[§6領地飛行§7] §f您已經離開或不再具有權限的領地，因此系統自動關閉飛行。");
-                Utils.teleportToSafety(player);
+                // Utils.teleportToSafety(player);
+                Utils.slowDownToSafety(player);
                 Utils.setFlightState(player, false);
             }
         }

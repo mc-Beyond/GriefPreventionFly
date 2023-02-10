@@ -4,6 +4,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 /**
@@ -30,6 +32,15 @@ public final class Utils {
                 return; // 返回
             }
         }
+    }
+
+    /**
+     * 緩慢至安全位置
+     *
+     * @param player 玩家
+     */
+    public static void slowDownToSafety(@NonNull Player player) {
+        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 60, 0));
     }
 
     /**
